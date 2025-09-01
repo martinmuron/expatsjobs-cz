@@ -12,7 +12,6 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { loadStripe } from '@stripe/stripe-js';
 
 const jobPostSchema = z.object({
   title: z.string().min(1, 'Job title is required'),
@@ -38,7 +37,6 @@ export default function PostJobPage() {
     handleSubmit,
     formState: { errors },
     setValue,
-    watch,
   } = useForm<JobPostForm>({
     resolver: zodResolver(jobPostSchema),
   });
@@ -92,7 +90,7 @@ export default function PostJobPage() {
             <div className="text-6xl mb-6">🎉</div>
             <h1 className="text-3xl font-bold mb-4">Job Posted Successfully!</h1>
             <p className="text-gray-600 mb-8">
-              Your job posting is now live and will be visible for 30 days. You'll receive an email confirmation shortly.
+              Your job posting is now live and will be visible for 30 days. You&apos;ll receive an email confirmation shortly.
             </p>
             <div className="space-y-4">
               <Button asChild className="w-full">
@@ -251,7 +249,7 @@ export default function PostJobPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="jobType">Job Type *</Label>
-                    <Select onValueChange={(value) => setValue('jobType', value as any)}>
+                    <Select onValueChange={(value) => setValue('jobType', value as 'full-time' | 'part-time' | 'contract')}>
                       <SelectTrigger className={errors.jobType ? 'border-red-500' : ''}>
                         <SelectValue placeholder="Select job type" />
                       </SelectTrigger>

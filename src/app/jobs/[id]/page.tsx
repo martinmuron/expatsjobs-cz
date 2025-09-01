@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { mockJobs } from '@/lib/mockJobs';
-import { MapPin, Clock, Building2, Users, Briefcase, Calendar, ArrowLeft } from 'lucide-react';
+import { MapPin, Clock, Building2, Briefcase, Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -126,7 +126,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ id: 
                   Apply Now
                 </Button>
                 <p className="text-sm text-gray-600 text-center">
-                  You will be redirected to the company's application page
+                  You will be redirected to the company&apos;s application page
                 </p>
               </CardContent>
             </Card>

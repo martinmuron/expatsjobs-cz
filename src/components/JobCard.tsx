@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Job } from '@/lib/mockJobs';
-import { MapPin, Clock, Building2, Users } from 'lucide-react';
+import { MapPin, Clock, Building2 } from 'lucide-react';
 import Link from 'next/link';
 
 interface JobCardProps {

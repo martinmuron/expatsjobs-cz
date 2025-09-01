@@ -43,7 +43,7 @@ export default function SignUpPage() {
               <div className="mx-auto w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-              <CardTitle className="text-lg">I'm an Employer</CardTitle>
+              <CardTitle className="text-lg">I&apos;m an Employer</CardTitle>
             </CardHeader>
             <CardContent className="pt-0 text-center">
               <p className="text-gray-600 text-sm">
@@ -70,7 +70,7 @@ export default function SignUpPage() {
               <div className="mx-auto w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-3">
                 <User className="w-6 h-6 text-white" />
               </div>
-              <CardTitle className="text-lg">I'm Looking for a Job</CardTitle>
+              <CardTitle className="text-lg">I&apos;m Looking for a Job</CardTitle>
             </CardHeader>
             <CardContent className="pt-0 text-center">
               <p className="text-gray-600 text-sm">
