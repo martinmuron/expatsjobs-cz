@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from '@/components/Header';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Eye, EyeOff } from 'lucide-react';
@@ -64,12 +65,11 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full">
-        <div className="text-center mb-8">
-          <Link href="/" className="text-2xl font-bold text-primary">
-            ExpatsJobs.cz
-          </Link>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full">
+          <div className="text-center mb-8">
           <h1 className="mt-6 text-3xl font-bold text-gray-900">Sign in to your account</h1>
           <p className="mt-2 text-gray-600">
             Welcome back! Please enter your details.
@@ -144,6 +144,7 @@ export default function SignInPage() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from '@/components/Header';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -84,13 +85,15 @@ export default function EmployerRegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-8">
-          <Link href="/auth/signup" className="inline-flex items-center text-primary hover:underline mb-4">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to account type selection
-          </Link>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <Link href="/auth/signup" className="inline-flex items-center text-primary hover:underline mb-4">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to account type selection
+            </Link>
           <div className="mx-auto w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
             <Building2 className="w-6 h-6 text-white" />
           </div>
@@ -315,6 +318,7 @@ export default function EmployerRegisterPage() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }
