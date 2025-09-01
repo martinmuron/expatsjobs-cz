@@ -1,0 +1,240 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime? @map("email_verified")
+  password      String?
+  image         String?
+  userType      UserType  @map("user_type")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  accounts        Account[]
+  sessions        Session[]
+  employerProfile EmployerProfile?
+  jobSeekerProfile JobSeekerProfile?
+
+  @@map("users")
+}
+
+model EmployerProfile {
+  id                 String  @id @default(cuid())
+  userId             String  @unique @map("user_id")
+  companyName        String  @map("company_name")
+  companyWebsite     String? @map("company_website")
+  companySize        String  @map("company_size")
+  industry           String
+  companyDescription String? @map("company_description") @db.Text
+  contactPerson      String  @map("contact_person")
+  phone              String?
+  address            String? @db.Text
+  logoUrl            String? @map("logo_url")
+  isVerified         Boolean @default(false) @map("is_verified")
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companies Company[]
+
+  @@map("employer_profiles")
+}
+
+model JobSeekerProfile {
+  id                String   @id @default(cuid())
+  userId            String   @unique @map("user_id")
+  firstName         String?  @map("first_name")
+  lastName          String?  @map("last_name")
+  phone             String?
+  location          String?
+  title             String?
+  bio               String?  @db.Text
+  experienceLevel   String?  @map("experience_level")
+  skills            Json     @default("[]")
+  languages         Json     @default("[]")
+  cvUrl             String?  @map("cv_url")
+  portfolioUrl      String?  @map("portfolio_url")
+  linkedinUrl       String?  @map("linkedin_url")
+  githubUrl         String?  @map("github_url")
+  salaryExpectation String?  @map("salary_expectation")
+  availability      String?
+  workAuthorization String?  @map("work_authorization")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applications Application[]
+  favorites JobFavorite[]
+
+  @@map("job_seeker_profiles")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@unique([identifier, token])
+  @@map("verificationtokens")
+}
+
+model Company {
+  id                String           @id @default(cuid())
+  employerProfileId String?          @map("employer_profile_id")
+  name              String
+  email             String
+  website           String?
+  logoUrl           String?          @map("logo_url")
+  description       String?          @db.Text
+  createdAt         DateTime         @default(now()) @map("created_at")
+  updatedAt         DateTime         @updatedAt @map("updated_at")
+
+  employerProfile EmployerProfile? @relation(fields: [employerProfileId], references: [id], onDelete: SetNull)
+  jobs            Job[]
+
+  @@map("companies")
+}
+
+model Job {
+  id                String    @id @default(cuid())
+  title             String
+  companyId         String?   @map("company_id")
+  location          String
+  jobType           JobType   @map("job_type")
+  salary            String?
+  description       String    @db.Text
+  requirements      String    @db.Text
+  languages         Json      @default("[]")
+  isActive          Boolean   @default(true) @map("is_active")
+  isFeatured        Boolean   @default(false) @map("is_featured")
+  postedDate        DateTime  @default(now()) @map("posted_date")
+  expiryDate        DateTime? @map("expiry_date")
+  viewsCount        Int       @default(0) @map("views_count")
+  applicationsCount Int       @default(0) @map("applications_count")
+  stripePaymentIntentId String? @map("stripe_payment_intent_id")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime  @updatedAt @map("updated_at")
+
+  company      Company?       @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  applications Application[]
+  favorites    JobFavorite[]
+  categories   JobCategory[]
+
+  @@map("jobs")
+}
+
+model Application {
+  id                   String            @id @default(cuid())
+  jobId                String            @map("job_id")
+  jobSeekerProfileId   String            @map("job_seeker_profile_id")
+  coverLetter          String?           @map("cover_letter") @db.Text
+  status               ApplicationStatus @default(PENDING)
+  appliedAt            DateTime          @default(now()) @map("applied_at")
+  createdAt            DateTime          @default(now()) @map("created_at")
+  updatedAt            DateTime          @updatedAt @map("updated_at")
+
+  job              Job              @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  jobSeekerProfile JobSeekerProfile @relation(fields: [jobSeekerProfileId], references: [id], onDelete: Cascade)
+
+  @@map("applications")
+}
+
+model JobFavorite {
+  id                 String   @id @default(cuid())
+  jobId              String   @map("job_id")
+  jobSeekerProfileId String   @map("job_seeker_profile_id")
+  favoritedAt        DateTime @default(now()) @map("favorited_at")
+
+  job              Job              @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  jobSeekerProfile JobSeekerProfile @relation(fields: [jobSeekerProfileId], references: [id], onDelete: Cascade)
+
+  @@unique([jobId, jobSeekerProfileId])
+  @@map("job_favorites")
+}
+
+model Category {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  slug        String        @unique
+  description String?       @db.Text
+  createdAt   DateTime      @default(now()) @map("created_at")
+
+  jobs JobCategory[]
+
+  @@map("categories")
+}
+
+model JobCategory {
+  id         String @id @default(cuid())
+  jobId      String @map("job_id")
+  categoryId String @map("category_id")
+
+  job      Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([jobId, categoryId])
+  @@map("job_categories")
+}
+
+enum UserType {
+  employer
+  job_seeker
+}
+
+enum JobType {
+  full_time  @map("full-time")
+  part_time  @map("part-time")
+  contract
+}
+
+enum ApplicationStatus {
+  PENDING   @map("pending")
+  REVIEWED  @map("reviewed") 
+  INTERVIEWED @map("interviewed")
+  HIRED     @map("hired")
+  REJECTED  @map("rejected")
+}
