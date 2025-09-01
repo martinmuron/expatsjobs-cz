@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
-import { prisma } from '@/lib/prisma';
+// import { prisma } from '@/lib/prisma';
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,54 +17,12 @@ export async function POST(req: NextRequest) {
       address,
     } = await req.json();
 
-    // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
-      where: { email },
-    });
-
-    if (existingUser) {
-      return NextResponse.json(
-        { error: 'User already exists' },
-        { status: 400 }
-      );
-    }
-
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12);
-
-    // Create user and employer profile in a transaction
-    const result = await prisma.$transaction(async (tx: typeof prisma) => {
-      // Create user
-      const user = await tx.user.create({
-        data: {
-          email,
-          password: hashedPassword,
-          name: contactPerson,
-          userType: 'employer',
-        },
-      });
-
-      // Create employer profile
-      const employerProfile = await tx.employerProfile.create({
-        data: {
-          userId: user.id,
-          companyName,
-          contactPerson,
-          phone,
-          companyWebsite: website || null,
-          companySize,
-          industry,
-          companyDescription: description,
-          address,
-        },
-      });
-
-      return { user, employerProfile };
-    });
-
+    // TODO: Implement database connection and user creation
+    // This is temporarily disabled for deployment
+    
     return NextResponse.json({ 
-      message: 'Employer account created successfully',
-      userId: result.user.id 
+      message: 'Employer registration endpoint - database connection coming soon',
+      status: 'pending_database_setup' 
     });
     
   } catch (error) {
