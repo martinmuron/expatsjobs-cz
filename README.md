@@ -2,6 +2,10 @@
 
 A modern job board platform designed for English-speaking professionals in the Czech Republic. Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 
+🌐 **Live Demo**: [expatsjobs-a6zhy7t7c-future-developments.vercel.app](https://expatsjobs-a6zhy7t7c-future-developments.vercel.app)
+
+![ExpatsJobs.cz Homepage](screenshots/homepage.png)
+
 ## Features
 
 - 🎯 **Job Listings**: Browse and search through job opportunities
