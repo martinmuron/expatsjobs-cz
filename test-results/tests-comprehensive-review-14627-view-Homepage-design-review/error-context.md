@@ -1,0 +1,254 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "ExpatsJobs.cz" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=e6]:
+          - link "Browse Jobs" [ref=e7] [cursor=pointer]:
+            - /url: /jobs
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e9] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e10]:
+          - link "Sign In" [ref=e11] [cursor=pointer]:
+            - /url: /auth/signin
+          - link "Sign Up" [ref=e12] [cursor=pointer]:
+            - /url: /auth/signup
+    - generic [ref=e14]:
+      - heading "Find Your Dream Job in Czech Republic" [level=1] [ref=e15]
+      - paragraph [ref=e16]: The premier job board for English-speaking professionals in the Czech Republic. Connect with top employers and advance your career.
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - img [ref=e22]
+            - textbox "Job title, keywords, or company" [ref=e25]
+          - generic [ref=e27]:
+            - img [ref=e28]
+            - combobox [ref=e31]:
+              - generic: Location
+              - img
+            - combobox [ref=e32]
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - combobox [ref=e38]:
+              - generic: Job Type
+              - img
+            - combobox [ref=e39]
+        - button "Search Jobs" [ref=e41]
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - heading "Latest Job Opportunities" [level=2] [ref=e45]
+        - paragraph [ref=e46]: Discover exciting career opportunities with leading companies across the Czech Republic
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - heading "Operations Coordinator – European Events" [level=3] [ref=e52]
+              - generic [ref=e53]:
+                - img [ref=e54]
+                - generic [ref=e58]: Europe Congress
+              - generic [ref=e59]:
+                - img [ref=e60]
+                - generic [ref=e63]: Prague
+            - generic [ref=e64]: full-time
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: Shape Unforgettable Experiences Across Europe. Join our dynamic team to coordinate and execute high-profile European events.
+            - generic [ref=e69]: English
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - generic [ref=e75]: 8/15/2024
+              - link "View Details" [ref=e76] [cursor=pointer]:
+                - /url: /jobs/1
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - heading "High School Computer Science Teacher" [level=3] [ref=e81]
+              - generic [ref=e82]:
+                - img [ref=e83]
+                - generic [ref=e87]: ACGA
+              - generic [ref=e88]:
+                - img [ref=e89]
+                - generic [ref=e92]: Prague
+            - generic [ref=e93]: part-time
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: Teach IT at a private gymnazium in the center of Prague! Perfect opportunity for tech professionals.
+            - generic [ref=e97]:
+              - generic [ref=e98]: English
+              - generic [ref=e99]: Czech
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - generic [ref=e105]: 8/14/2024
+              - link "View Details" [ref=e106] [cursor=pointer]:
+                - /url: /jobs/2
+        - generic [ref=e107]:
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - heading "High School Spanish Teacher" [level=3] [ref=e111]
+              - generic [ref=e112]:
+                - img [ref=e113]
+                - generic [ref=e117]: ACGA
+              - generic [ref=e118]:
+                - img [ref=e119]
+                - generic [ref=e122]: Prague
+            - generic [ref=e123]: full-time
+          - generic [ref=e125]:
+            - generic [ref=e126]: CZK 40,000 - 50,000
+            - paragraph [ref=e127]: Profesor/a de español en centro de educación secundaria. Join our international school environment.
+            - generic [ref=e128]:
+              - generic [ref=e129]: English
+              - generic [ref=e130]: Spanish
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - img [ref=e133]
+                - generic [ref=e136]: 8/13/2024
+              - link "View Details" [ref=e137] [cursor=pointer]:
+                - /url: /jobs/3
+        - generic [ref=e138]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - heading "Assistance Coordinator (French & Ukrainian)" [level=3] [ref=e142]
+              - generic [ref=e143]:
+                - img [ref=e144]
+                - generic [ref=e148]: Euro-Center Prague, s.r.o.
+              - generic [ref=e149]:
+                - img [ref=e150]
+                - generic [ref=e153]: Prague
+            - generic [ref=e154]: full-time
+          - generic [ref=e156]:
+            - paragraph [ref=e157]: Trusted medical assistance making global travel safer and stress-free. Coordinate emergency medical services.
+            - generic [ref=e158]:
+              - generic [ref=e159]: English
+              - generic [ref=e160]: French
+              - generic [ref=e161]: Ukrainian
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - img [ref=e164]
+                - generic [ref=e167]: 8/12/2024
+              - link "View Details" [ref=e168] [cursor=pointer]:
+                - /url: /jobs/4
+        - generic [ref=e169]:
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - heading "Assistance Coordinator (French & Bulgarian)" [level=3] [ref=e173]
+              - generic [ref=e174]:
+                - img [ref=e175]
+                - generic [ref=e179]: Euro-Center Prague, s.r.o.
+              - generic [ref=e180]:
+                - img [ref=e181]
+                - generic [ref=e184]: Prague
+            - generic [ref=e185]: full-time
+          - generic [ref=e187]:
+            - paragraph [ref=e188]: Trusted medical assistance making global travel safer and stress-free. Handle multilingual support cases.
+            - generic [ref=e189]:
+              - generic [ref=e190]: English
+              - generic [ref=e191]: French
+              - generic [ref=e192]: Bulgarian
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - img [ref=e195]
+                - generic [ref=e198]: 8/11/2024
+              - link "View Details" [ref=e199] [cursor=pointer]:
+                - /url: /jobs/5
+        - generic [ref=e200]:
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - heading "Lodging Partner Associate" [level=3] [ref=e204]
+              - generic [ref=e205]:
+                - img [ref=e206]
+                - generic [ref=e210]: Expedia
+              - generic [ref=e211]:
+                - img [ref=e212]
+                - generic [ref=e215]: Prague
+            - generic [ref=e216]: full-time
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: B2B Customer service role within global travel tech leader. Work with accommodation partners worldwide.
+            - generic [ref=e220]:
+              - generic [ref=e221]: English
+              - generic [ref=e222]: Danish
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - img [ref=e225]
+                - generic [ref=e228]: 8/10/2024
+              - link "View Details" [ref=e229] [cursor=pointer]:
+                - /url: /jobs/6
+      - link "View All Jobs" [ref=e231] [cursor=pointer]:
+        - /url: /jobs
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - generic [ref=e236]: 500+
+        - generic [ref=e237]: Active Jobs
+      - generic [ref=e238]:
+        - generic [ref=e239]: 200+
+        - generic [ref=e240]: Companies
+      - generic [ref=e241]:
+        - generic [ref=e242]: 10k+
+        - generic [ref=e243]: Job Seekers
+    - generic [ref=e246]:
+      - heading "For Employers" [level=2] [ref=e247]
+      - paragraph [ref=e248]: Reach qualified English-speaking professionals and expats in the Czech Republic
+      - generic [ref=e249]:
+        - heading "Job Posting Package" [level=3] [ref=e250]
+        - generic [ref=e251]: 2,000 CZK
+        - generic [ref=e252]: 30 days visibility
+        - list [ref=e253]:
+          - listitem [ref=e254]: ✓ 30 days job visibility
+          - listitem [ref=e255]: ✓ Featured in search results
+          - listitem [ref=e256]: ✓ Company logo display
+          - listitem [ref=e257]: ✓ Applicant tracking
+          - listitem [ref=e258]: ✓ Email notifications
+        - link "Post Your Job" [ref=e259] [cursor=pointer]:
+          - /url: /post-job
+    - contentinfo [ref=e260]:
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - generic [ref=e263]:
+            - heading "ExpatsJobs.cz" [level=3] [ref=e264]
+            - paragraph [ref=e265]: Connecting English-speaking professionals with opportunities in the Czech Republic.
+          - generic [ref=e266]:
+            - heading "Job Seekers" [level=4] [ref=e267]
+            - list [ref=e268]:
+              - listitem [ref=e269]:
+                - link "Browse Jobs" [ref=e270] [cursor=pointer]:
+                  - /url: /jobs
+              - listitem [ref=e271]:
+                - link "Companies" [ref=e272] [cursor=pointer]:
+                  - /url: /companies
+              - listitem [ref=e273]:
+                - link "Salary Guide" [ref=e274] [cursor=pointer]:
+                  - /url: /salary-guide
+          - generic [ref=e275]:
+            - heading "Employers" [level=4] [ref=e276]
+            - list [ref=e277]:
+              - listitem [ref=e278]:
+                - link "Post a Job" [ref=e279] [cursor=pointer]:
+                  - /url: /post-job
+              - listitem [ref=e280]:
+                - link "Pricing" [ref=e281] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e282]:
+                - link "Resources" [ref=e283] [cursor=pointer]:
+                  - /url: /employer-resources
+          - generic [ref=e284]:
+            - heading "Support" [level=4] [ref=e285]
+            - list [ref=e286]:
+              - listitem [ref=e287]:
+                - link "About Us" [ref=e288] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e289]:
+                - link "Contact" [ref=e290] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e291]:
+                - link "Help Center" [ref=e292] [cursor=pointer]:
+                  - /url: /help
+        - paragraph [ref=e294]: © 2024 ExpatsJobs.cz. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e300] [cursor=pointer]:
+    - img [ref=e301] [cursor=pointer]
+  - alert [ref=e304]
+```

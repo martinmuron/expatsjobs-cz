@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Briefcase, Globe, Award, Target, Heart } from "lucide-react"
+import Link from "next/link"
 
 export default function AboutPage() {
   return (
@@ -184,10 +185,10 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                <a href="/jobs">Browse Jobs</a>
+                <Link href="/jobs">Browse Jobs</Link>
               </Button>
               <Button asChild variant="outline">
-                <a href="/post-job">Post a Job</a>
+                <Link href="/post-job">Post a Job</Link>
               </Button>
             </div>
           </div>

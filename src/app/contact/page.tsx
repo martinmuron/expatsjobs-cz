@@ -14,7 +14,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
             <p className="text-xl text-blue-100">
-              Get in touch with our team. We're here to help you succeed.
+              Get in touch with our team. We&apos;re here to help you succeed.
             </p>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
                 <p className="text-gray-600 mb-8">
-                  We're here to help you find your dream job or connect with the best talent in the Czech Republic.
+                  We&apos;re here to help you find your dream job or connect with the best talent in the Czech Republic.
                 </p>
               </div>
 
@@ -137,7 +137,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Do you help with visa requirements?</h4>
-                    <p className="text-sm text-gray-600">While we don't provide visa services directly, we can connect you with trusted partners who specialize in immigration.</p>
+                    <p className="text-sm text-gray-600">While we don&apos;t provide visa services directly, we can connect you with trusted partners who specialize in immigration.</p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Is there a fee for job seekers?</h4>

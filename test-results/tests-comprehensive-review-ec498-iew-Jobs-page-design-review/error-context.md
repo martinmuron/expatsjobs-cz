@@ -1,0 +1,530 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "ExpatsJobs.cz" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=e6]:
+          - link "Browse Jobs" [ref=e7] [cursor=pointer]:
+            - /url: /jobs
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e9] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e10]:
+          - link "Sign In" [ref=e11] [cursor=pointer]:
+            - /url: /auth/signin
+          - link "Post a Job" [ref=e12] [cursor=pointer]:
+            - /url: /post-job
+    - main [ref=e13]:
+      - generic [ref=e15]:
+        - heading "Find Your Perfect Job" [level=1] [ref=e16]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e21]:
+              - img [ref=e22]
+              - textbox "Job title, keywords, or company" [ref=e25]
+            - generic [ref=e27]:
+              - img [ref=e28]
+              - combobox [ref=e31]:
+                - generic: Location
+                - img
+              - combobox [ref=e32]
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - combobox [ref=e38]:
+                - generic: Job Type
+                - img
+              - combobox [ref=e39]
+          - button "Search Jobs" [ref=e41]
+      - generic [ref=e43]:
+        - heading "20 Jobs Found" [level=2] [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - heading "Operations Coordinator – European Events" [level=3] [ref=e52]
+                - generic [ref=e53]:
+                  - img [ref=e54]
+                  - generic [ref=e58]: Europe Congress
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Prague
+              - generic [ref=e64]: full-time
+            - generic [ref=e66]:
+              - paragraph [ref=e67]: Shape Unforgettable Experiences Across Europe. Join our dynamic team to coordinate and execute high-profile European events.
+              - generic [ref=e69]: English
+              - generic [ref=e70]:
+                - generic [ref=e71]:
+                  - img [ref=e72]
+                  - generic [ref=e75]: 8/15/2024
+                - link "View Details" [ref=e76] [cursor=pointer]:
+                  - /url: /jobs/1
+          - generic [ref=e77]:
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - heading "High School Computer Science Teacher" [level=3] [ref=e81]
+                - generic [ref=e82]:
+                  - img [ref=e83]
+                  - generic [ref=e87]: ACGA
+                - generic [ref=e88]:
+                  - img [ref=e89]
+                  - generic [ref=e92]: Prague
+              - generic [ref=e93]: part-time
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: Teach IT at a private gymnazium in the center of Prague! Perfect opportunity for tech professionals.
+              - generic [ref=e97]:
+                - generic [ref=e98]: English
+                - generic [ref=e99]: Czech
+              - generic [ref=e100]:
+                - generic [ref=e101]:
+                  - img [ref=e102]
+                  - generic [ref=e105]: 8/14/2024
+                - link "View Details" [ref=e106] [cursor=pointer]:
+                  - /url: /jobs/2
+          - generic [ref=e107]:
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - heading "High School Spanish Teacher" [level=3] [ref=e111]
+                - generic [ref=e112]:
+                  - img [ref=e113]
+                  - generic [ref=e117]: ACGA
+                - generic [ref=e118]:
+                  - img [ref=e119]
+                  - generic [ref=e122]: Prague
+              - generic [ref=e123]: full-time
+            - generic [ref=e125]:
+              - generic [ref=e126]: CZK 40,000 - 50,000
+              - paragraph [ref=e127]: Profesor/a de español en centro de educación secundaria. Join our international school environment.
+              - generic [ref=e128]:
+                - generic [ref=e129]: English
+                - generic [ref=e130]: Spanish
+              - generic [ref=e131]:
+                - generic [ref=e132]:
+                  - img [ref=e133]
+                  - generic [ref=e136]: 8/13/2024
+                - link "View Details" [ref=e137] [cursor=pointer]:
+                  - /url: /jobs/3
+          - generic [ref=e138]:
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - heading "Assistance Coordinator (French & Ukrainian)" [level=3] [ref=e142]
+                - generic [ref=e143]:
+                  - img [ref=e144]
+                  - generic [ref=e148]: Euro-Center Prague, s.r.o.
+                - generic [ref=e149]:
+                  - img [ref=e150]
+                  - generic [ref=e153]: Prague
+              - generic [ref=e154]: full-time
+            - generic [ref=e156]:
+              - paragraph [ref=e157]: Trusted medical assistance making global travel safer and stress-free. Coordinate emergency medical services.
+              - generic [ref=e158]:
+                - generic [ref=e159]: English
+                - generic [ref=e160]: French
+                - generic [ref=e161]: Ukrainian
+              - generic [ref=e162]:
+                - generic [ref=e163]:
+                  - img [ref=e164]
+                  - generic [ref=e167]: 8/12/2024
+                - link "View Details" [ref=e168] [cursor=pointer]:
+                  - /url: /jobs/4
+          - generic [ref=e169]:
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - heading "Assistance Coordinator (French & Bulgarian)" [level=3] [ref=e173]
+                - generic [ref=e174]:
+                  - img [ref=e175]
+                  - generic [ref=e179]: Euro-Center Prague, s.r.o.
+                - generic [ref=e180]:
+                  - img [ref=e181]
+                  - generic [ref=e184]: Prague
+              - generic [ref=e185]: full-time
+            - generic [ref=e187]:
+              - paragraph [ref=e188]: Trusted medical assistance making global travel safer and stress-free. Handle multilingual support cases.
+              - generic [ref=e189]:
+                - generic [ref=e190]: English
+                - generic [ref=e191]: French
+                - generic [ref=e192]: Bulgarian
+              - generic [ref=e193]:
+                - generic [ref=e194]:
+                  - img [ref=e195]
+                  - generic [ref=e198]: 8/11/2024
+                - link "View Details" [ref=e199] [cursor=pointer]:
+                  - /url: /jobs/5
+          - generic [ref=e200]:
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - heading "Lodging Partner Associate" [level=3] [ref=e204]
+                - generic [ref=e205]:
+                  - img [ref=e206]
+                  - generic [ref=e210]: Expedia
+                - generic [ref=e211]:
+                  - img [ref=e212]
+                  - generic [ref=e215]: Prague
+              - generic [ref=e216]: full-time
+            - generic [ref=e218]:
+              - paragraph [ref=e219]: B2B Customer service role within global travel tech leader. Work with accommodation partners worldwide.
+              - generic [ref=e220]:
+                - generic [ref=e221]: English
+                - generic [ref=e222]: Danish
+              - generic [ref=e223]:
+                - generic [ref=e224]:
+                  - img [ref=e225]
+                  - generic [ref=e228]: 8/10/2024
+                - link "View Details" [ref=e229] [cursor=pointer]:
+                  - /url: /jobs/6
+          - generic [ref=e230]:
+            - generic [ref=e232]:
+              - generic [ref=e233]:
+                - heading "Customer Advisor with Finnish" [level=3] [ref=e234]
+                - generic [ref=e235]:
+                  - img [ref=e236]
+                  - generic [ref=e240]: BlueLink International CZ
+                - generic [ref=e241]:
+                  - img [ref=e242]
+                  - generic [ref=e245]: Prague
+              - generic [ref=e246]: full-time
+            - generic [ref=e248]:
+              - paragraph [ref=e249]: Paid training, discounted airline tickets, relocation support. Join our international customer service team.
+              - generic [ref=e250]:
+                - generic [ref=e251]: English
+                - generic [ref=e252]: Finnish
+              - generic [ref=e253]:
+                - generic [ref=e254]:
+                  - img [ref=e255]
+                  - generic [ref=e258]: 8/9/2024
+                - link "View Details" [ref=e259] [cursor=pointer]:
+                  - /url: /jobs/7
+          - generic [ref=e260]:
+            - generic [ref=e262]:
+              - generic [ref=e263]:
+                - heading "Software Engineer" [level=3] [ref=e264]
+                - generic [ref=e265]:
+                  - img [ref=e266]
+                  - generic [ref=e270]: Tech Solutions Prague
+                - generic [ref=e271]:
+                  - img [ref=e272]
+                  - generic [ref=e275]: Prague
+              - generic [ref=e276]: full-time
+            - generic [ref=e278]:
+              - generic [ref=e279]: CZK 80,000 - 120,000
+              - paragraph [ref=e280]: Join our growing tech team developing innovative software solutions for European markets.
+              - generic [ref=e282]: English
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - img [ref=e285]
+                  - generic [ref=e288]: 8/8/2024
+                - link "View Details" [ref=e289] [cursor=pointer]:
+                  - /url: /jobs/8
+          - generic [ref=e290]:
+            - generic [ref=e292]:
+              - generic [ref=e293]:
+                - heading "Marketing Manager" [level=3] [ref=e294]
+                - generic [ref=e295]:
+                  - img [ref=e296]
+                  - generic [ref=e300]: Global Ventures Czech
+                - generic [ref=e301]:
+                  - img [ref=e302]
+                  - generic [ref=e305]: Prague
+              - generic [ref=e306]: full-time
+            - generic [ref=e308]:
+              - generic [ref=e309]: CZK 60,000 - 80,000
+              - paragraph [ref=e310]: Lead marketing initiatives across Central European markets. Drive brand awareness and customer acquisition.
+              - generic [ref=e311]:
+                - generic [ref=e312]: English
+                - generic [ref=e313]: German
+              - generic [ref=e314]:
+                - generic [ref=e315]:
+                  - img [ref=e316]
+                  - generic [ref=e319]: 8/7/2024
+                - link "View Details" [ref=e320] [cursor=pointer]:
+                  - /url: /jobs/9
+          - generic [ref=e321]:
+            - generic [ref=e323]:
+              - generic [ref=e324]:
+                - heading "Financial Analyst" [level=3] [ref=e325]
+                - generic [ref=e326]:
+                  - img [ref=e327]
+                  - generic [ref=e331]: Investment Partners CZ
+                - generic [ref=e332]:
+                  - img [ref=e333]
+                  - generic [ref=e336]: Prague
+              - generic [ref=e337]: full-time
+            - generic [ref=e339]:
+              - generic [ref=e340]: CZK 70,000 - 95,000
+              - paragraph [ref=e341]: Analyze investment opportunities and provide financial insights for our growing portfolio.
+              - generic [ref=e343]: English
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - img [ref=e346]
+                  - generic [ref=e349]: 8/6/2024
+                - link "View Details" [ref=e350] [cursor=pointer]:
+                  - /url: /jobs/10
+          - generic [ref=e351]:
+            - generic [ref=e353]:
+              - generic [ref=e354]:
+                - heading "UX/UI Designer" [level=3] [ref=e355]
+                - generic [ref=e356]:
+                  - img [ref=e357]
+                  - generic [ref=e361]: Design Studio Prague
+                - generic [ref=e362]:
+                  - img [ref=e363]
+                  - generic [ref=e366]: Prague
+              - generic [ref=e367]: full-time
+            - generic [ref=e369]:
+              - generic [ref=e370]: CZK 65,000 - 85,000
+              - paragraph [ref=e371]: Create intuitive user experiences for our digital products. Work with international clients.
+              - generic [ref=e373]: English
+              - generic [ref=e374]:
+                - generic [ref=e375]:
+                  - img [ref=e376]
+                  - generic [ref=e379]: 8/5/2024
+                - link "View Details" [ref=e380] [cursor=pointer]:
+                  - /url: /jobs/11
+          - generic [ref=e381]:
+            - generic [ref=e383]:
+              - generic [ref=e384]:
+                - heading "Sales Representative" [level=3] [ref=e385]
+                - generic [ref=e386]:
+                  - img [ref=e387]
+                  - generic [ref=e391]: Business Solutions Group
+                - generic [ref=e392]:
+                  - img [ref=e393]
+                  - generic [ref=e396]: Prague
+              - generic [ref=e397]: full-time
+            - generic [ref=e399]:
+              - generic [ref=e400]: CZK 45,000 + commission
+              - paragraph [ref=e401]: Drive B2B sales for innovative business solutions. Great earning potential with commission structure.
+              - generic [ref=e402]:
+                - generic [ref=e403]: English
+                - generic [ref=e404]: Czech
+              - generic [ref=e405]:
+                - generic [ref=e406]:
+                  - img [ref=e407]
+                  - generic [ref=e410]: 8/4/2024
+                - link "View Details" [ref=e411] [cursor=pointer]:
+                  - /url: /jobs/12
+          - generic [ref=e412]:
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - heading "Content Writer" [level=3] [ref=e416]
+                - generic [ref=e417]:
+                  - img [ref=e418]
+                  - generic [ref=e422]: Media House Prague
+                - generic [ref=e423]:
+                  - img [ref=e424]
+                  - generic [ref=e427]: Prague
+              - generic [ref=e428]: part-time
+            - generic [ref=e430]:
+              - generic [ref=e431]: CZK 25,000 - 35,000
+              - paragraph [ref=e432]: Create engaging content for various digital platforms. Flexible working hours available.
+              - generic [ref=e434]: English
+              - generic [ref=e435]:
+                - generic [ref=e436]:
+                  - img [ref=e437]
+                  - generic [ref=e440]: 8/3/2024
+                - link "View Details" [ref=e441] [cursor=pointer]:
+                  - /url: /jobs/13
+          - generic [ref=e442]:
+            - generic [ref=e444]:
+              - generic [ref=e445]:
+                - heading "Project Manager" [level=3] [ref=e446]
+                - generic [ref=e447]:
+                  - img [ref=e448]
+                  - generic [ref=e452]: Consulting Partners
+                - generic [ref=e453]:
+                  - img [ref=e454]
+                  - generic [ref=e457]: Prague
+              - generic [ref=e458]: full-time
+            - generic [ref=e460]:
+              - generic [ref=e461]: CZK 75,000 - 100,000
+              - paragraph [ref=e462]: Lead cross-functional teams delivering complex consulting projects for international clients.
+              - generic [ref=e463]:
+                - generic [ref=e464]: English
+                - generic [ref=e465]: German
+              - generic [ref=e466]:
+                - generic [ref=e467]:
+                  - img [ref=e468]
+                  - generic [ref=e471]: 8/2/2024
+                - link "View Details" [ref=e472] [cursor=pointer]:
+                  - /url: /jobs/14
+          - generic [ref=e473]:
+            - generic [ref=e475]:
+              - generic [ref=e476]:
+                - heading "Data Scientist" [level=3] [ref=e477]
+                - generic [ref=e478]:
+                  - img [ref=e479]
+                  - generic [ref=e483]: Analytics Corp Prague
+                - generic [ref=e484]:
+                  - img [ref=e485]
+                  - generic [ref=e488]: Prague
+              - generic [ref=e489]: full-time
+            - generic [ref=e491]:
+              - generic [ref=e492]: CZK 85,000 - 115,000
+              - paragraph [ref=e493]: Analyze complex datasets and build predictive models for business intelligence solutions.
+              - generic [ref=e495]: English
+              - generic [ref=e496]:
+                - generic [ref=e497]:
+                  - img [ref=e498]
+                  - generic [ref=e501]: 8/1/2024
+                - link "View Details" [ref=e502] [cursor=pointer]:
+                  - /url: /jobs/15
+          - generic [ref=e503]:
+            - generic [ref=e505]:
+              - generic [ref=e506]:
+                - heading "HR Specialist" [level=3] [ref=e507]
+                - generic [ref=e508]:
+                  - img [ref=e509]
+                  - generic [ref=e513]: Talent Solutions Czech
+                - generic [ref=e514]:
+                  - img [ref=e515]
+                  - generic [ref=e518]: Prague
+              - generic [ref=e519]: full-time
+            - generic [ref=e521]:
+              - generic [ref=e522]: CZK 50,000 - 65,000
+              - paragraph [ref=e523]: Support recruitment and employee development initiatives in our growing organization.
+              - generic [ref=e524]:
+                - generic [ref=e525]: English
+                - generic [ref=e526]: Czech
+              - generic [ref=e527]:
+                - generic [ref=e528]:
+                  - img [ref=e529]
+                  - generic [ref=e532]: 7/31/2024
+                - link "View Details" [ref=e533] [cursor=pointer]:
+                  - /url: /jobs/16
+          - generic [ref=e534]:
+            - generic [ref=e536]:
+              - generic [ref=e537]:
+                - heading "Graphic Designer" [level=3] [ref=e538]
+                - generic [ref=e539]:
+                  - img [ref=e540]
+                  - generic [ref=e544]: Creative Agency Prague
+                - generic [ref=e545]:
+                  - img [ref=e546]
+                  - generic [ref=e549]: Prague
+              - generic [ref=e550]: contract
+            - generic [ref=e552]:
+              - generic [ref=e553]: CZK 400/hour
+              - paragraph [ref=e554]: Create visual designs for marketing campaigns and brand materials. Freelance opportunity.
+              - generic [ref=e556]: English
+              - generic [ref=e557]:
+                - generic [ref=e558]:
+                  - img [ref=e559]
+                  - generic [ref=e562]: 7/30/2024
+                - link "View Details" [ref=e563] [cursor=pointer]:
+                  - /url: /jobs/17
+          - generic [ref=e564]:
+            - generic [ref=e566]:
+              - generic [ref=e567]:
+                - heading "Business Analyst" [level=3] [ref=e568]
+                - generic [ref=e569]:
+                  - img [ref=e570]
+                  - generic [ref=e574]: Strategy Consultants
+                - generic [ref=e575]:
+                  - img [ref=e576]
+                  - generic [ref=e579]: Prague
+              - generic [ref=e580]: full-time
+            - generic [ref=e582]:
+              - generic [ref=e583]: CZK 65,000 - 80,000
+              - paragraph [ref=e584]: Analyze business processes and recommend improvements for operational efficiency.
+              - generic [ref=e586]: English
+              - generic [ref=e587]:
+                - generic [ref=e588]:
+                  - img [ref=e589]
+                  - generic [ref=e592]: 7/29/2024
+                - link "View Details" [ref=e593] [cursor=pointer]:
+                  - /url: /jobs/18
+          - generic [ref=e594]:
+            - generic [ref=e596]:
+              - generic [ref=e597]:
+                - heading "English Teacher" [level=3] [ref=e598]
+                - generic [ref=e599]:
+                  - img [ref=e600]
+                  - generic [ref=e604]: International Language School
+                - generic [ref=e605]:
+                  - img [ref=e606]
+                  - generic [ref=e609]: Prague
+              - generic [ref=e610]: part-time
+            - generic [ref=e612]:
+              - generic [ref=e613]: CZK 400-600/lesson
+              - paragraph [ref=e614]: Teach English to adult learners and corporate clients. Flexible schedule available.
+              - generic [ref=e616]: English
+              - generic [ref=e617]:
+                - generic [ref=e618]:
+                  - img [ref=e619]
+                  - generic [ref=e622]: 7/28/2024
+                - link "View Details" [ref=e623] [cursor=pointer]:
+                  - /url: /jobs/19
+          - generic [ref=e624]:
+            - generic [ref=e626]:
+              - generic [ref=e627]:
+                - heading "Account Manager" [level=3] [ref=e628]
+                - generic [ref=e629]:
+                  - img [ref=e630]
+                  - generic [ref=e634]: Client Services Prague
+                - generic [ref=e635]:
+                  - img [ref=e636]
+                  - generic [ref=e639]: Prague
+              - generic [ref=e640]: full-time
+            - generic [ref=e642]:
+              - generic [ref=e643]: CZK 55,000 - 70,000
+              - paragraph [ref=e644]: Manage relationships with key international clients and drive business growth.
+              - generic [ref=e645]:
+                - generic [ref=e646]: English
+                - generic [ref=e647]: French
+              - generic [ref=e648]:
+                - generic [ref=e649]:
+                  - img [ref=e650]
+                  - generic [ref=e653]: 7/27/2024
+                - link "View Details" [ref=e654] [cursor=pointer]:
+                  - /url: /jobs/20
+    - contentinfo [ref=e655]:
+      - generic [ref=e656]:
+        - generic [ref=e657]:
+          - generic [ref=e658]:
+            - heading "ExpatsJobs.cz" [level=3] [ref=e659]
+            - paragraph [ref=e660]: Connecting English-speaking professionals with opportunities in the Czech Republic.
+          - generic [ref=e661]:
+            - heading "Job Seekers" [level=4] [ref=e662]
+            - list [ref=e663]:
+              - listitem [ref=e664]:
+                - link "Browse Jobs" [ref=e665] [cursor=pointer]:
+                  - /url: /jobs
+              - listitem [ref=e666]:
+                - link "Companies" [ref=e667] [cursor=pointer]:
+                  - /url: /companies
+              - listitem [ref=e668]:
+                - link "Salary Guide" [ref=e669] [cursor=pointer]:
+                  - /url: /salary-guide
+          - generic [ref=e670]:
+            - heading "Employers" [level=4] [ref=e671]
+            - list [ref=e672]:
+              - listitem [ref=e673]:
+                - link "Post a Job" [ref=e674] [cursor=pointer]:
+                  - /url: /post-job
+              - listitem [ref=e675]:
+                - link "Pricing" [ref=e676] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e677]:
+                - link "Resources" [ref=e678] [cursor=pointer]:
+                  - /url: /employer-resources
+          - generic [ref=e679]:
+            - heading "Support" [level=4] [ref=e680]
+            - list [ref=e681]:
+              - listitem [ref=e682]:
+                - link "About Us" [ref=e683] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e684]:
+                - link "Contact" [ref=e685] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e686]:
+                - link "Help Center" [ref=e687] [cursor=pointer]:
+                  - /url: /help
+        - paragraph [ref=e689]: © 2024 ExpatsJobs.cz. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e695] [cursor=pointer]:
+    - img [ref=e696] [cursor=pointer]
+  - alert [ref=e699]
+```

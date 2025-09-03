@@ -61,7 +61,7 @@ export default function TermsPage() {
 
             <h2>6. Disclaimers</h2>
             <p>
-              The information on this website is provided on an 'as is' basis. To the fullest extent permitted by law, 
+              The information on this website is provided on an &apos;as is&apos; basis. To the fullest extent permitted by law, 
               ExpatsJobs.cz excludes all representations, warranties, conditions and terms.
             </p>
 
