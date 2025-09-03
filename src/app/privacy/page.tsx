@@ -93,7 +93,7 @@ export default function PrivacyPage() {
               We ensure appropriate safeguards are in place for such transfers.
             </p>
 
-            <h2>10. Children's Privacy</h2>
+            <h2>10. Children&apos;s Privacy</h2>
             <p>
               Our services are not directed to children under 16. We do not knowingly collect personal information from children under 16.
             </p>
