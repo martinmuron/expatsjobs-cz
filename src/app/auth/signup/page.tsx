@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Header } from '@/components/Header';
 import { Building2, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -20,7 +19,6 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <div className="bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
           <div className="text-center mb-8">
