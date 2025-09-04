@@ -11,6 +11,12 @@ interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   metaKeywords: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   author: {
     name: string;
     avatar: string;
