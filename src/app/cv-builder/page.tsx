@@ -99,7 +99,7 @@ export default function CVBuilderPage() {
     setExperiences(experiences.filter(exp => exp.id !== id));
   };
 
-  const updateExperience = (id: string, field: keyof Experience, value: any) => {
+  const updateExperience = (id: string, field: keyof Experience, value: string | boolean) => {
     setExperiences(experiences.map(exp => 
       exp.id === id ? { ...exp, [field]: value } : exp
     ));
@@ -122,7 +122,7 @@ export default function CVBuilderPage() {
     setEducation(education.filter(edu => edu.id !== id));
   };
 
-  const updateEducation = (id: string, field: keyof Education, value: any) => {
+  const updateEducation = (id: string, field: keyof Education, value: string | boolean) => {
     setEducation(education.map(edu => 
       edu.id === id ? { ...edu, [field]: value } : edu
     ));
@@ -141,7 +141,7 @@ export default function CVBuilderPage() {
     setSkills(skills.filter(skill => skill.id !== id));
   };
 
-  const updateSkill = (id: string, field: keyof Skill, value: any) => {
+  const updateSkill = (id: string, field: keyof Skill, value: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill
     ));
@@ -196,7 +196,7 @@ export default function CVBuilderPage() {
             <h1 className="text-3xl font-bold text-gray-900">CV AI Builder</h1>
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Create a professional CV in minutes. Fill out the form below and we'll generate a beautifully formatted PDF for you.
+            Create a professional CV in minutes. Fill out the form below and we&apos;ll generate a beautifully formatted PDF for you.
           </p>
         </div>
 
@@ -450,7 +450,7 @@ export default function CVBuilderPage() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {skills.map((skill, index) => (
+                {skills.map((skill) => (
                   <div key={skill.id} className="flex items-center space-x-2">
                     <Input
                       value={skill.name}
