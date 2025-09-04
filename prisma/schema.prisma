@@ -57,6 +57,7 @@ model User {
   sessions        Session[]
   employerProfile EmployerProfile?
   jobSeekerProfile JobSeekerProfile?
+  blogPosts       BlogPost[]
 
   @@map("users")
 }
@@ -237,4 +238,94 @@ enum ApplicationStatus {
   INTERVIEWED @map("interviewed")
   HIRED     @map("hired")
   REJECTED  @map("rejected")
+}
+
+model BlogPost {
+  id              String      @id @default(cuid())
+  title           String
+  slug            String      @unique
+  excerpt         String?     @db.Text
+  content         String      @db.Text
+  featuredImage   String?     @map("featured_image")
+  authorId        String?     @map("author_id")
+  status          BlogStatus  @default(DRAFT)
+  publishedAt     DateTime?   @map("published_at")
+  readingTime     Int?        @map("reading_time") // in minutes
+  viewsCount      Int         @default(0) @map("views_count")
+  
+  // SEO fields
+  metaTitle       String?     @map("meta_title")
+  metaDescription String?     @map("meta_description")
+  metaKeywords    String?     @map("meta_keywords")
+  canonicalUrl    String?     @map("canonical_url")
+  ogTitle         String?     @map("og_title")
+  ogDescription   String?     @map("og_description")
+  ogImage         String?     @map("og_image")
+  twitterTitle    String?     @map("twitter_title")
+  twitterDescription String?  @map("twitter_description")
+  twitterImage    String?     @map("twitter_image")
+  
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  author          User?       @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  tags            BlogPostTag[]
+  categories      BlogPostCategory[]
+
+  @@map("blog_posts")
+}
+
+model BlogCategory {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?   @db.Text
+  color       String?   // hex color for UI
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  posts       BlogPostCategory[]
+
+  @@map("blog_categories")
+}
+
+model BlogTag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  color     String?  // hex color for UI
+  createdAt DateTime @default(now()) @map("created_at")
+
+  posts     BlogPostTag[]
+
+  @@map("blog_tags")
+}
+
+model BlogPostCategory {
+  id         String @id @default(cuid())
+  postId     String @map("post_id")
+  categoryId String @map("category_id")
+
+  post     BlogPost     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  category BlogCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, categoryId])
+  @@map("blog_post_categories")
+}
+
+model BlogPostTag {
+  id     String @id @default(cuid())
+  postId String @map("post_id")
+  tagId  String @map("tag_id")
+
+  post BlogPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag  BlogTag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, tagId])
+  @@map("blog_post_tags")
+}
+
+enum BlogStatus {
+  DRAFT     @map("draft")
+  PUBLISHED @map("published")
+  ARCHIVED  @map("archived")
 }

@@ -1,10 +1,24 @@
 import { JobCard } from '@/components/JobCard';
 import { SearchForm } from '@/components/SearchForm';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { mockJobs } from '@/lib/mockJobs';
+import { getLatestBlogPosts } from '@/lib/mockBlogs';
 import Link from 'next/link';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 export default function Home() {
+  const latestBlogPosts = getLatestBlogPosts(3);
+  
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+  
   return (
     <div className="min-h-screen bg-background">
 
@@ -60,6 +74,72 @@ export default function Home() {
               <div className="text-4xl font-bold text-primary mb-2">10k+</div>
               <div className="text-gray-600">Job Seekers</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Latest Career Insights</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Stay informed with expert advice, market trends, and tips for advancing your career in Czech Republic
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {latestBlogPosts.map((post) => (
+              <Card key={post.id} className="hover:shadow-lg transition-shadow">
+                <div className="h-32 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
+                  <div className="text-blue-600 text-center">
+                    <div className="text-sm font-semibold">Career Insights</div>
+                  </div>
+                </div>
+                <CardHeader className="pb-3">
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {post.categories.slice(0, 1).map((category) => (
+                      <Badge key={category} variant="outline" className="text-xs">
+                        {category}
+                      </Badge>
+                    ))}
+                  </div>
+                  <Link href={`/blog/${post.slug}`}>
+                    <h3 className="text-lg font-semibold hover:text-primary transition-colors line-clamp-2 mb-2">
+                      {post.title}
+                    </h3>
+                  </Link>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex items-center">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {formatDate(post.publishedAt)}
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="h-3 w-3 mr-1" />
+                        {post.readingTime} min
+                      </div>
+                    </div>
+                  </div>
+                  <Link 
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                  >
+                    Read More
+                    <ArrowRight className="h-3 w-3 ml-1" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" asChild>
+              <Link href="/blog">View All Articles</Link>
+            </Button>
           </div>
         </div>
       </section>
