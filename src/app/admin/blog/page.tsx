@@ -30,8 +30,7 @@ import {
   Trash2,
   Calendar,
   TrendingUp,
-  FileText,
-  Users
+  FileText
 } from 'lucide-react';
 import { getAllBlogPosts } from '@/lib/mockBlogs';
 

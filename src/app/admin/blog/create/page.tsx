@@ -27,10 +27,7 @@ import {
   Save, 
   Eye, 
   Search, 
-  Globe, 
-  Image,
   Tag,
-  Calendar,
   Clock,
   X
 } from 'lucide-react';
