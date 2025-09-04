@@ -1,6 +1,5 @@
 import { JobCard } from '@/components/JobCard';
 import { SearchForm } from '@/components/SearchForm';
-import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { mockJobs } from '@/lib/mockJobs';
 import Link from 'next/link';
@@ -8,7 +7,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
 
       {/* Hero Section */}
       <section className="bg-primary text-white py-20">

@@ -30,6 +30,9 @@ export function Header() {
           <Link href="/jobs" className="text-gray-600 hover:text-primary">
             Browse Jobs
           </Link>
+          <Link href="/cv-builder" className="text-gray-600 hover:text-primary">
+            CV AI Builder
+          </Link>
           <Link href="/about" className="text-gray-600 hover:text-primary">
             About
           </Link>
